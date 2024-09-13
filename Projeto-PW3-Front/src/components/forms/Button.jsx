@@ -1,9 +1,9 @@
-import styes from './Button.module.css'
+import styles from './Button.module.css'
 
 function Button({rotulo}) {
 
     return(
-        <div>
+        <div className={styles.button}>
             <button>{rotulo}</button>
         </div>
     )

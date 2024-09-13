@@ -1,9 +1,10 @@
 /* CONTAINER DO MENU */
 .navbar{
+    width: 1200px;
     display: flex;
     justify-content: space-between;
     background-color: #724c27;
-    padding: 1em;
+    padding: 2em;
 }
 
 /* REGRA DA LISTA DE LIVROS */
@@ -22,5 +23,5 @@
 
 /* REGRA DE TAMANHO DA IMAGEM LOGO */
 .logo{
-    width: 60PX;
+    width: 80PX;
 }

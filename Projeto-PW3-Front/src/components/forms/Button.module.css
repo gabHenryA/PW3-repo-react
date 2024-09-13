@@ -2,7 +2,7 @@ button{
     background-color: #724c27;
     color: #FFF;
     padding: 0 45px;
-    border: 2px solid #FFF;
+    border: 2px solid #d49453;
     border-radius: 10px;
     height: 50px;
     text-transform: uppercase;
@@ -13,5 +13,5 @@ button{
 }
 
 button:hover{
-    background-color: #e1a956;
+    background-color: #e29625;
 }

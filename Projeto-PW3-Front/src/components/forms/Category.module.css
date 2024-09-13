@@ -1,7 +1,11 @@
 .form_control{
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em;
+    margin: 1em;
+    padding: 10px;
+    background-color: rgb(238, 204, 172);
+    border: 5px solid #724c27;
+    border-radius: 10px;
 }
 
 .form_control label{
@@ -13,7 +17,7 @@
 }
 
 .form_control select{
-    width: 1000px;
+    width: 625px;
     padding: 20px;
     border-radius: 0;
     border: none;

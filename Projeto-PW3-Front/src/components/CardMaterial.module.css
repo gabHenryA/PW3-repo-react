@@ -1,11 +1,13 @@
 .card_material{
+    margin: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: max-content;
+    width: 300px;
+    height: 300px;
     border-radius: 5px;
-    background-color: #DEDEDE;
-    border: 1px solid #CCC;
+    background-color: #f7d5a9;
+    border: 5px solid #d49453;
     font-family: Helvetica;
 }
 
@@ -18,6 +20,7 @@
 }
 
 img{
-    width: 80px;
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 5px;
 }

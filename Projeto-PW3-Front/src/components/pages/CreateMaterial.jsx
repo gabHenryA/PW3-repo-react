@@ -10,7 +10,7 @@ const CreateMaterial = () => {
     return(
         
         <section className={style.create_material}>
-            <h1>SUBIR MATERIAIS</h1>
+            <h1 className={style.title}>SUBIR MATERIAIS</h1>
 
             <Input
                 type='text'
@@ -38,7 +38,12 @@ const CreateMaterial = () => {
                 text='Descrição do Material'
             />
 
-            
+            <Input
+                type='file'
+                name='file'
+                placeHolder='Insira seu arquivo'
+                text='Arquivo'
+            />
 
             <Button
                 rotulo='Subir material'
