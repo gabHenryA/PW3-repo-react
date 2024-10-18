@@ -6,7 +6,7 @@ const conn = new Sequelize(
     '',
     {
         host: 'localhost',
-        port: '4456',
+        port: '3306',
         dialect: 'mysql',
         timezone: '-03:00'
     }

@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const conn = require('..database/database')
+const conn = require('../database/database')
 
 const modelCategorias = conn.define(
     'tbl_categorias',
@@ -17,5 +17,8 @@ const modelCategorias = conn.define(
         }
     }
 )
+
+// modelCategorias.sync({force:true});
+
 
 module.exports = modelCategorias

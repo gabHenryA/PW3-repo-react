@@ -8,7 +8,7 @@ function Category({ name, text, options }) {
             <label htmlFor={name}>{text}</label>
             <form>
                 <select name={name} id={name}>
-                    <option>Selecione uma cartegoria</option>
+                    <option>Selecione uma categoria</option>
                     {
                         options.map((option) => {
                             return <option>{option.nome_categoria}</option>
