@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize')
 const conn = require('../database/database')
+const modelCategorias = require('./modelCategorias')
+
 
 const modelMateriais = conn.define(
     'tbl_materiais',
@@ -9,6 +11,11 @@ const modelMateriais = conn.define(
             type:Sequelize.INTEGER,
             primaryKey: true,
             autoIncrement: true
+        },
+        cod_categoria:
+        {
+            type: Sequelize.INTEGER,
+            allowNull: false
         },
         nome_material:
         {
@@ -27,6 +34,16 @@ const modelMateriais = conn.define(
         }
     }
 )
+
+modelCategorias.hasMany(modelMateriais, {
+    foreignKey: 'cod_categoria',
+    sourceKey: 'cod_categoria'
+});
+
+modelMateriais.belongsTo(modelCategorias, {
+    foreignKey: 'cod_categoria',
+    sourceKey: 'cod_categoria'
+});
 
 // modelMateriais.sync({force:true});
 

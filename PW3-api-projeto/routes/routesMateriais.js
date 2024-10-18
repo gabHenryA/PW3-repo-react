@@ -10,10 +10,11 @@ router.get('/', (req, res) => {
 
 router.post('/inserirMaterial', (req, res) => {
 
-    let { nome_material, autor_material, descricao_material } = req.body
+    let { cod_categoria, nome_material, autor_material, descricao_material } = req.body
 
     modelMateriais.create(
         {
+            cod_categoria,
             nome_material,
             autor_material,
             descricao_material

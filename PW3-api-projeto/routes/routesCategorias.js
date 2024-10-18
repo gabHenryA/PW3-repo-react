@@ -38,7 +38,8 @@ router.get('/listagemCategorias', (req, res) => {
             return res.status(201).json(
                 {
                     errorStatus: false,
-                    mensageStatus: 'CATEGORIAS LISTADAS'
+                    mensageStatus: 'CATEGORIAS LISTADAS',
+                    data:response
                 }
             )
         }   

@@ -22,6 +22,11 @@ const CreateMaterial = () => {
         console.log(material)
     }
 
+    function handleChangeCategory(event) {
+        setMaterial({...material, cod_categoria: event.target.value});
+        console.log(material);
+    }
+
     /* RECUPERAR OS DADOS DE CAREGORIAS DA APIREST */
     useEffect(() => {
         fetch('http://localhost:5000/listagemCategorias', {
@@ -38,7 +43,7 @@ const CreateMaterial = () => {
 
         ).then(
             (data) => {
-                console.log('DATA: ' + data.data[3].nome_categoria)
+                // console.log('DATA: ' + data.data[3].nome_categoria)
                 setCategorias(data.data)
             }
         ).catch(
@@ -92,7 +97,7 @@ const CreateMaterial = () => {
 
                 <Input
                     type='text'
-                    name='txtMaterial'
+                    name='nome_material'
                     placeHolder='Digite o nome deste material'
                     text='Título do material'
                     handlerChangeMaterialProp={handlerChangeMaterial}
@@ -102,11 +107,12 @@ const CreateMaterial = () => {
                     name='category'
                     text='Selecione a categoria do material'
                     options={categorias}
+                    handleChangeCategory={handleChangeCategory}
                 />
 
                 <Input
                     type='text'
-                    name='txtAuthor'
+                    name='autor_material'
                     placeHolder='Digite o nome do autor do Material'
                     text='Nome do autor'
                     handlerChangeMaterialProp={handlerChangeMaterial}
@@ -114,7 +120,7 @@ const CreateMaterial = () => {
 
                 <Input
                     type='text'
-                    name='txtDescription'
+                    name='descricao_material'
                     placeHolder='Digite uma descrição do material'
                     text='Descrição do material'
                     handlerChangeMaterialProp={handlerChangeMaterial}
@@ -131,7 +137,7 @@ const CreateMaterial = () => {
                     name='file'
                     placeHolder='Insira seu arquivo'
                     text='Arquivo'
-                    handlerChangeMaterialProp={handlerChangeMaterial}
+                    handlerChangeMaterialProp={null}
                 />
 
                 <Button
