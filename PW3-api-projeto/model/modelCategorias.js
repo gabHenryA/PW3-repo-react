@@ -18,7 +18,7 @@ const modelCategorias = conn.define(
     }
 )
 
-// modelCategorias.sync({force:true});
+modelCategorias.sync({force:true});
 
 
 module.exports = modelCategorias

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import style from './CreateMaterial.module.css'
 
 import Input from "../forms/Input";
@@ -15,6 +16,8 @@ const CreateMaterial = () => {
 
     /* STATE DE DADOS QUE VAI ARMAZENAR O OBJETO JSON DE LIVRO */
     const [material, setMaterial] = useState({})
+
+    const navigate = useNavigate()
 
     /* HANDLER DE CAPTURA DOS DADOS DE INPUT (NOME DO LIVRO, AUTOR E DESCRIÇÃO) */
     function handlerChangeMaterial(event) {
@@ -74,7 +77,7 @@ const CreateMaterial = () => {
             .then(
                 (data) => {
                     console.log(data)
-                    // navigate('/livros',{state:'LIVRO CADASTRADO COM SUCESSO!'});
+                    navigate('/listMaterial',{state:'MATERIAL CADASTRADO COM SUCESSO!'});
                 }
             )
             .catch(

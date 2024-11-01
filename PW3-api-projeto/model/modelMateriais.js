@@ -45,7 +45,7 @@ modelMateriais.belongsTo(modelCategorias, {
     sourceKey: 'cod_categoria'
 });
 
-// modelMateriais.sync({force:true});
+modelMateriais.sync({force:true});
 
 
 module.exports = modelMateriais
