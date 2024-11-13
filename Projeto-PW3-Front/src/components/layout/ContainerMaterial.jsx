@@ -2,12 +2,12 @@ import React from 'react'
 
 import style from './ContainerMaterial.module.css'
 
-const ContainerBook = (props) => {
+const ContainerMaterial = (props) => {
     return (
-        <div className={style.container_book}>
+        <div className={style.container_material}>
             {props.children}
         </div>
     )
 }
 
-export default ContainerBook
+export default ContainerMaterial

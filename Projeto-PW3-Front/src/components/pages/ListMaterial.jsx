@@ -3,17 +3,21 @@ import { useState, useEffect } from "react"
 import style from './ListMaterial.module.css'
 import CardMaterial from "../CardMaterial"
 
+import ContainerMaterial from "../layout/ContainerMaterial";
+
+import ded from '../../assets/d&d.jpg'
+
 import Container from '../layout/Container'
 
 // import imageDED from 'dd.jpg'
 
 const ListMaterial = () => {
 
-    const [material, setMaterial] = useState([])
+    const [materiais, setMaterial] = useState([])
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/listagemCategorias', {
+        fetch('http://localhost:5000/listagemMaterias', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -21,30 +25,33 @@ const ListMaterial = () => {
                 'Acess-Control-Allow-Headers': '*'
             },
         })
-    }, [])
     .then((resp)=>resp.json())
     .then((data)=>{
         console.log('MATERIAL: ' + data.data)
         setMaterial(data.data)
-        console.log('STATE: ' + material)
+        console.log('STATE: ' + materiais)
     })
-    .catch((err)=> {
-        console.log(err)
-    }, [])
-
+    .catch((err)=> {console.log(err)})
+    },[])
 
     return (
 
         <Container>
 
+            <h1 className={style.title}>CATÁLOGO COMPLETO</h1>
+
             <section className={style.list_material}>
-
-                <h1 className={style.title}>CATÁLOGO COMPLETO</h1>
-
+                
                     <ContainerMaterial>
                         {
-                            material.map((material)=>(
+                            materiais.map((material)=>(
                                 <CardMaterial
+
+                                    titulo={material.nome_material}
+                                    autor={material.autor_material}
+                                    imagem={ded}
+                                    cod_material={material.cod_material}
+                                    key={material.cod_material}
 
                                     // CONTINUAR DAQUI
 

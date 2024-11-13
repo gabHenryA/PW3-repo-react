@@ -1,11 +1,16 @@
-// import style from './Button.module.css'
+import style from './Button.module.css'
+import { Link } from 'react-router-dom'
 
-// const Button = ({label}) => {
-//     return(
-//         <div className={style.buttonContainer}>
-//             <button>{label}</button>
-//         </div>
-//     )
-// }
+const Button = ({label, router, cod_material}) => {
+    return(
+        <div className={style.buttonContainer}>
 
-// export default Button
+            <Link to={`${router}${cod_material}`}>
+                <button>{label}</button>
+            </Link>
+            
+        </div>
+    )
+}
+
+export default Button
