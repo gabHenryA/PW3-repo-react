@@ -9,7 +9,7 @@ const CardMaterial = ({ titulo, autor, imagem, cod_material }) => {
             <p className={style.autor}>{autor}</p>
             <img src={imagem} title={{titulo}} />
             <div>
-                <Button label='DETALHES' cod_material={cod_material}/>
+                <Button label='DETALHES' router='/detailMaterial/' cod_material={cod_material}/>
             </div>
         </div>
     )

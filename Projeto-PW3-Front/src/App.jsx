@@ -5,6 +5,7 @@ import Container from './components/layout/Container'
 import Home from './components/pages/Home'
 import CreateMaterial from './components/pages/CreateMaterial'
 import ListMaterial from './components/pages/ListMaterial'
+import DetailMaterial from './components/pages/DetailMaterial'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
               <Route path='/' element={<Home/>}/>
               <Route path='/listMaterial' element={<ListMaterial/>}/>
               <Route path='/createMaterial' element={<CreateMaterial/>}/>
+              <Route path='/detailMaterial/:cod_material' element={<DetailMaterial/>}/>
             </Route>
 
           </Routes>
