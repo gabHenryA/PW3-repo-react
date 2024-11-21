@@ -58,6 +58,8 @@ const DetailMaterial = () => {
 
                     <Button 
                         label='EXCLUIR'
+                        router='/deleteMaterial/'
+                        cod_material={material.cod_material}
                     />
 
                 </div>

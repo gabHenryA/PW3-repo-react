@@ -6,6 +6,7 @@ import Home from './components/pages/Home'
 import CreateMaterial from './components/pages/CreateMaterial'
 import ListMaterial from './components/pages/ListMaterial'
 import DetailMaterial from './components/pages/DetailMaterial'
+import DeleteMaterial from './components/pages/DeleteMaterial'
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
               <Route path='/listMaterial' element={<ListMaterial/>}/>
               <Route path='/createMaterial' element={<CreateMaterial/>}/>
               <Route path='/detailMaterial/:cod_material' element={<DetailMaterial/>}/>
+              <Route path='/deleteMaterial/:cod_material' element={<DeleteMaterial/>}/>
+              {/* <Route path='/detailMaterial/:cod_material' element={<DetailMaterial/>}/> */}
             </Route>
 
           </Routes>
