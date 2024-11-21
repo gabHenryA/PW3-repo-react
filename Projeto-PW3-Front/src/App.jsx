@@ -7,6 +7,7 @@ import CreateMaterial from './components/pages/CreateMaterial'
 import ListMaterial from './components/pages/ListMaterial'
 import DetailMaterial from './components/pages/DetailMaterial'
 import DeleteMaterial from './components/pages/DeleteMaterial'
+import UpdateMaterial from './components/pages/UpdateMaterial'
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
               <Route path='/createMaterial' element={<CreateMaterial/>}/>
               <Route path='/detailMaterial/:cod_material' element={<DetailMaterial/>}/>
               <Route path='/deleteMaterial/:cod_material' element={<DeleteMaterial/>}/>
-              {/* <Route path='/detailMaterial/:cod_material' element={<DetailMaterial/>}/> */}
+              <Route path='/updateMaterial/:cod_material' element={<UpdateMaterial/>}/>
             </Route>
 
           </Routes>

@@ -54,6 +54,8 @@ const DetailMaterial = () => {
                 <div className={style.container_buttons}>
                     <Button 
                         label='EDITAR'
+                        router='/updateMaterial/'
+                        cod_material={material.cod_material}
                     />
 
                     <Button 
